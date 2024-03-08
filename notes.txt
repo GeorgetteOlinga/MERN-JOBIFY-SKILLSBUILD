@@ -1,0 +1,13 @@
+in vs-code
+installextensiton----ES7+ React/Redux/React-Native snippets to help fill out the react funtion component with the arrow funtion
+on setting-- unselect------ import react
+extension---install---auto rename tag
+make sure we have extension prettier - code formatter
+on setting--- set by default type format--check format on paste ---and---- format on save
+ on setting --type default for ---select--prettier -code formatter--that help to prefill the classname in the <div>
+
+ ====================================install vite==================================
+ then remove boilerplate---index.css--app.css--app.---jsx
+ in app.jsx---rafce ==to create a new component
+
+ =================git init==================================

@@ -31,7 +31,7 @@ const Register = () => {
       <p>
         Already a member?
         <Link to="/login" className="member-btn">
-          Login{" "}
+          Login
         </Link>
       </p>
     </Wrapper>

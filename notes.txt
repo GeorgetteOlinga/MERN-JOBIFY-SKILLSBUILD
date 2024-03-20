@@ -16,3 +16,5 @@ on setting--- set by default type format--check format on paste ---and---- forma
  =========in github====download john-smilga/mern-jobify-v2.git============
  click on code------ssh---download
 ----------------in my folder structure--client--src--replace the asset folder with the one from github------------
+
+=======NB====all details can be found in the README file in the asset================================

@@ -25,7 +25,7 @@ const Wrapper = styled.main`
   a {
     color: var(--primary-500);
     text-transform: capitalize;
-  }
+  } 
 `;
 
 export default Wrapper;

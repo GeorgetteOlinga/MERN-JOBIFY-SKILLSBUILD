@@ -11,17 +11,27 @@ const Register = () => {
         <h4> Register</h4>
         {/*============== w're creating components in the form by grapping props for FormRow.jsx file=================*/}
 
-        <FormRow type="text" name="name" defaultValue="Olinga" />
-
+        
+        <FormRow
+          type="text"
+          name="firstName"
+          labelText="first name"
+          defaultValue="Georgette"
+        />
         <FormRow
           type="text"
           name="lastName"
           labelText="last name"
           defaultValue="Mbida"
         />
-        <FormRow type="text" name="location" defaultValue="earth" />
+        <FormRow type="text" name="location" defaultValue="ohio" />
 
-        <FormRow type="email" name="email" defaultValue="olinga@gmail.com" />
+        <FormRow
+          type="email"
+          name="email"
+          defaultValue="olinga@gmail.com"
+          placeholder="enter email address "
+        />
         <FormRow type="password" name="password" defaultValue="12345" />
 
         <button type="submit" className="btn btn-block">

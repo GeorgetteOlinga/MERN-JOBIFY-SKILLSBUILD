@@ -33,7 +33,6 @@ const paths = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
-
       {
         path: "dashboard",
         element: <DashboardLayout />,
@@ -56,15 +55,14 @@ const paths = createBrowserRouter([
           },
           {
             path: "admin",
-            element: <Admin/>,
+            element: <Admin />,
           },
         ],
       },
     ],
   },
+
 ]);
-
-
 
 const App = () => {
   return <RouterProvider router={paths} />;

@@ -16,7 +16,7 @@ if (error.status ===404){
         <img src={img} alt="not found" />
         <h3>Oops!!! page not found</h3>
         <p>We can't seem to find the page you are looking for</p>
-        <Link to="/dashboard">back home</Link>
+        <Link to="/">back home</Link>
       </div>
       {/*<h1>Error Page !!!</h1>
       <h2>{error.error.message}</h2> {/* this message is usefull for developer to display what is causing  the error   */}

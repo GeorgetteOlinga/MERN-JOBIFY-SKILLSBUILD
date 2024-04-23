@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+
+import styled from "styled-components";
 
 const Wrapper = styled.aside`
   @media (min-width: 992px) {
@@ -58,6 +59,7 @@ const Wrapper = styled.aside`
   .nav-link:hover {
     color: var(--primary-500);
   }
+
   .icon {
     font-size: 1.5rem;
     margin-right: 1rem;
@@ -69,3 +71,5 @@ const Wrapper = styled.aside`
   }
 `;
 export default Wrapper;
+
+

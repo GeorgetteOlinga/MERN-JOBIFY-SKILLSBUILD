@@ -6,8 +6,6 @@ import { createContext, useContext, useState } from "react";
 
 const DashboardContext = createContext()
 
-
-
 const DashboardLayout = () => {
   //temp
   const user = {name: "olinga"}
@@ -48,5 +46,16 @@ const logoutUser = async () => {
   );
 };
 
-export const useDashboardContext = () => useContext
+// export const useDashboardContext = () => useContext
+export const useDashboardContext = () => useContext(DashboardContext)
 export default DashboardLayout;
+
+
+// export const DashboardLayout = () => {
+//   return (
+//     <div>DashboardLayout</div>
+//   )
+// }
+
+
+

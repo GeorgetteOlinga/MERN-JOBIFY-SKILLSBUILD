@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.aside`
   display: none;
+  /*bigsidebar should only display if the screen is large than 992*/
   @media (min-width: 992px) {
     display: block;
-    box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
     .sidebar-container {
       background: var(--background-secondary-color);
       min-height: 100vh;
       height: 100%;
-      width: 250px;
+       width: 250px;
       margin-left: -250px;
       transition: margin-left 0.3s ease-in-out;
     }
@@ -57,6 +58,6 @@ const Wrapper = styled.aside`
     .pending {
       background: var(--background-color);
     }
-  }
+  } 
 `;
 export default Wrapper;

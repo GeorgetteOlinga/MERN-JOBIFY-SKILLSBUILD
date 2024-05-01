@@ -4,32 +4,44 @@ import { BigSidebar, Navbar, SmallSidebar } from "../components";
 import { createContext, useContext, useState } from "react";
 // import BigSidebar from "../components/BigSidebar";
 
-const DashboardContext = createContext()
+const DashboardContext = createContext();
 
-const DashboardLayout = () => {
+
+
+const DashboardLayout = ({isDarkThemeEnabled}) => {
   //temp
-  const user = {name: "olinga"}
-  const [showSidebar, setShowSidebar] = useState(false)
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const user = { name: "olinga" };
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeEnabled);// using   isDarkThemeEnabled as a prop makes keep all the pages in the dashboard in the same theme dark or clear 
 
-const toggleDarkTheme = () => {
-console.log( "toggle dark theme");
-};
+  //===by setting the variables by default in the app.jsx, it allows the Darktheme to loadwhen the application is loading
 
-const toggleSidebar = () => {
-  setShowSidebar(!ShowSidebar);
-};
+  const toggleDarkTheme = () => {
+    const newDarkTheme = !isDarkTheme;
+    setIsDarkTheme(newDarkTheme);
+    document.body.classList.toggle("dark-theme", newDarkTheme)
+    localStorage.setItem("darkTheme", newDarkTheme)//it is better to access the dark theme in the local storage instead of in the dashboard
+  };
 
-const logoutUser = async () => {
-  console.log("logout user");
-};
+  const toggleSidebar = () => {
+    setShowSidebar(!ShowSidebar);
+  };
 
+  const logoutUser = async () => {
+    console.log("logout user");
+  };
 
   return (
-    <DashboardContext.Provider value={{
-      user,
-      showSidebar, isDarkTheme, toggleDarkTheme,toggleSidebar, logoutUser
-      }}>
+    <DashboardContext.Provider
+      value={{
+        user,
+        showSidebar,
+        isDarkTheme,
+        toggleDarkTheme,
+        toggleSidebar,
+        logoutUser,
+      }}
+    >
       <Wrapper>
         <main className="dashboard">
           <SmallSidebar />
@@ -47,15 +59,11 @@ const logoutUser = async () => {
 };
 
 // export const useDashboardContext = () => useContext
-export const useDashboardContext = () => useContext(DashboardContext)
+export const useDashboardContext = () => useContext(DashboardContext);
 export default DashboardLayout;
-
 
 // export const DashboardLayout = () => {
 //   return (
 //     <div>DashboardLayout</div>
 //   )
 // }
-
-
-

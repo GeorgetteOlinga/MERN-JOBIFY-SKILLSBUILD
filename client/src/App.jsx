@@ -14,6 +14,16 @@ import {
   Admin,
 } from "./pages";
 
+ //===by setting the variable "--checkDefaultTheme---" by default in the app.jsx, it allows the Darktheme to loadwhen the application is loading
+const checkDefaultTheme = () => {
+  const isDarkTheme = localStorage.getItem("darkTheme") === "true";
+  document.body.classList.toggle("dark-theme", isDarkTheme);
+  return isDarkTheme;
+};
+
+const isDarkThemeEnabled = checkDefaultTheme()
+
+
 const paths = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +45,7 @@ const paths = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <DashboardLayout />,
+        element: <DashboardLayout  isDarkThemeEnabled={isDarkThemeEnabled}/>,
         children: [
           {
             index: true,

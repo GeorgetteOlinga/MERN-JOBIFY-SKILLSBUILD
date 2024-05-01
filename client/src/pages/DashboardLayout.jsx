@@ -3,18 +3,22 @@ import Wrapper from "../assets/wrappers/Dashboard";
 import { BigSidebar, Navbar, SmallSidebar } from "../components";
 import { createContext, useContext, useState } from "react";
 // import BigSidebar from "../components/BigSidebar";
+import { checkDefaultTheme } from "../App";
+
 
 const DashboardContext = createContext();
 
 
 
-const DashboardLayout = ({isDarkThemeEnabled}) => {
+const DashboardLayout = ({}) => {
   //temp
   const user = { name: "olinga" };
   const [showSidebar, setShowSidebar] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeEnabled);// using   isDarkThemeEnabled as a prop makes keep all the pages in the dashboard in the same theme dark or clear 
+  const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme());// using   isDarkThemeEnabled as a prop makes keep all the pages in the dashboard in the same theme dark or clear 
 
   //===by setting the variables by default in the app.jsx, it allows the Darktheme to loadwhen the application is loading
+
+  //we finally import checkDefaultTheme and invoke it in the usestate
 
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;

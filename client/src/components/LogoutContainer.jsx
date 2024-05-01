@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDashboardContext } from "../pages/DashboardLayout";
 
 const logoutContainer = () => {
-    const [showLogout, setShowLogout] = useState (false);
+    const [showLogout, setShowLogout] = useState (true);
     const {user, logoutUser} = useDashboardContext();
 
     console.log('[user]',user)
